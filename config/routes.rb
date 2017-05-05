@@ -24,7 +24,7 @@ Rails.application.routes.draw do
       resources :issues
       resources :reports
       resources :sessions, only: [:create, :destroy]
-      resources :users,    only: [:index, :show]
+      resources :users,    only: [:index, :show, :create]
       resources :votes
 
     end
