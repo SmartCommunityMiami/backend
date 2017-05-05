@@ -1,0 +1,12 @@
+<p>
+  <strong>Description:</strong>
+  <%= @issue.description %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @issue.department.name %>
+</p>
+
+<%= link_to 'Edit', edit_web_issue_path(@issue) %> |
+<%= link_to 'Back', web_issues_path %>

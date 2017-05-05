@@ -1,0 +1,37 @@
+<p>
+  <strong>Issue:</strong>
+  <%= @report.issue.description %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @report.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @report.user.email %>
+</p>
+
+<p>
+  <strong>Picture Link:</strong>
+  <%= @report.picture_link %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @report.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @report.longitude %>
+</p>
+
+<p>
+  <strong>Date Resolved:</strong>
+  <%= @report.date_resolved %>
+</p>
+
+<%= link_to 'Edit', edit_web_report_path(@report) %> |
+<%= link_to 'Back', web_reports_path %>

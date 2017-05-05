@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @department.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @department.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @department.phone %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @department.organization %>
+</p>
+
+<%= link_to 'Edit', edit_web_department_path(@department) %> |
+<%= link_to 'Back', web_departments_path %>

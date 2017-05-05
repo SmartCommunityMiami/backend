@@ -1,0 +1,32 @@
+<%= form_for [:web, vote] do |f| %>
+  <% if vote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vote.errors.count, "error") %> prohibited this vote from being saved:</h2>
+
+      <ul>
+      <% vote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :report %>
+    <%= f.select :report_id, Report.all.collect {|c| [ c.description, c.id ] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user %>
+    <%= f.select :user_id, User.all.collect {|c| [ c.email, c.id ] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :direction %>
+    <%= f.text_field :direction %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,142 @@
+body {
+  background-color: #29ABE2;
+  color: #333;
+  font-family: "Century Gothic", arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+p, ol, ul, td {
+  font-family: "Century Gothic", arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+pre {
+  background-color: #0071BC;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #fff;
+
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #0071BC;
+  }
+}
+a.btn {
+  color: #fff;
+  background-color: #0071BC;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: #00D383;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #000;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+
+div.container-fluid{
+  background-color: #00D383;
+}
+
+.navbar-default .navbar-brand{
+  color: #000;
+  &:hover{
+  color: #fff;
+  }
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+  &:hover{
+  color: #fff;
+  }
+}
+
+.navbar-toggle {
+  background-color: #00D383;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #888888;
+  border-width: 2px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #888888;
+  border-width: 2px;
+}
+
+.table-striped>tbody>tr:nth-child(odd){
+  background-color: #fff;
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+   background-color: #00D383;
+ }
+
+
+

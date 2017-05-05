@@ -1,0 +1,17 @@
+<p>
+  <strong>Report:</strong>
+  <%= @vote.report.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vote.user.email %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @vote.direction %>
+</p>
+
+<%= link_to 'Edit', edit_web_vote_path(@vote) %> |
+<%= link_to 'Back', web_votes_path %>
