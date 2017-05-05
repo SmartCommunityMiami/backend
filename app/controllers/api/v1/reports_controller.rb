@@ -11,6 +11,7 @@ class Api::V1::ReportsController < Api::ApiController
 
   # GET /reports/1.json
   def show
+    # @votes = Votes.find_by(report_id: @report.id).sum(:direction)
   end
 
   # POST /reports.json

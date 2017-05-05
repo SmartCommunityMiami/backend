@@ -16,17 +16,28 @@ class Api::V1::VotesController < Api::ApiController
   # POST /votes.json
   def create
     @vote = Vote.new(vote_params)
+    @vote.user = current_user
     if @vote.save
       render :show, status: :created, location: api_vote_url(@vote)
     else
-      render json: @vote.errors, status: :unprocessable_entity
+      @vote = Vote.find_by(user_id: current_user.id, report_id: params[:vote][:report_id])
+      @vote.direction = params[:vote][:direction]
+      if @vote.save
+        render :show, status: :created, location: api_vote_url(@vote)
+      else
+        render json: @vote.errors, status: :unprocessable_entity
+      end
     end
   end
 
   # PATCH/PUT /votes/1.json
   def update
-    if @vote.update(vote_params)
-      render :show, status: :ok, location: api_vote_url(@vote)
+    if current_user == @vote.user then
+      if @vote.update(vote_params)
+        render :show, status: :ok, location: api_vote_url(@vote)
+      else
+        render json: @vote.errors, status: :unprocessable_entity
+      end
     else
       render json: @vote.errors, status: :unprocessable_entity
     end
@@ -34,8 +45,12 @@ class Api::V1::VotesController < Api::ApiController
 
   # DELETE /votes/1.json
   def destroy
-    @vote.destroy
-    head :no_content 
+    if current_user == @vote.user then
+      @vote.destroy
+      head :no_content 
+    else
+      render json: @vote.errors, status: :unprocessable_entity
+    end
   end
 
   private

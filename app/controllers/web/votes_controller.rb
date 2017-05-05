@@ -26,6 +26,7 @@ class Web::VotesController < ApplicationController
   def create
     if user_signed_in?
       @vote = Vote.new(vote_params)
+      @vote.user = current_user
       if @vote.save
         redirect_to web_vote_path(@vote), notice: 'Vote was successfully created.'
       else
@@ -37,19 +38,25 @@ class Web::VotesController < ApplicationController
   # PATCH/PUT /votes/1
   def update
     if user_signed_in?
-      if @vote.update(vote_params)
-        redirect_to web_vote_path(@vote), notice: 'Vote was successfully updated.'
+      if current_user == @vote.user then
+        if @vote.update(vote_params)
+          redirect_to web_vote_path(@vote), notice: 'Vote was successfully updated.'
+        else
+          render :edit
+        end
       else
-        render :edit
+        redirect_to web_votes_path, notice: 'Cannot update other users\' votes.'
       end
     end
   end
 
   # DELETE /votes/1
   def destroy
-    if user_signed_in?
+    if user_signed_in? && current_user == @vote.user then
       @vote.destroy
       redirect_to web_votes_url, notice: 'Vote was successfully destroyed.'
+    else
+      redirect_to web_votes_path, notice: 'Cannot destroy other users\' votes.'
     end
   end
 
