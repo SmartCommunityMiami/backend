@@ -26,3 +26,4 @@
 !.elasticbeanstalk/*.global.yml
 
 /erd.pdf
+*.DS_Store
