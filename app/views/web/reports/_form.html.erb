@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :user %>
-    <%= f.select :user_id, User.all.collect {|c| [ c.email, c.id ] } %>
+    <%= f.select :user_id, User.all.collect {|c| [ c.username, c.id ] } %>
   </div>
 
   <div class="field">
