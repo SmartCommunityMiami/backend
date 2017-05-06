@@ -1,17 +1,22 @@
 body {
   background-color: #29ABE2;
-  color: #333;
+  color: #000;
   font-family: "Century Gothic", arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
 }
 
-p, ol, ul, td {
+p, ol, ul, td{
   font-family: "Century Gothic", arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
+}
+
+h2{
+  font-size: 20px;
+
 }
 
 pre {
@@ -74,6 +79,7 @@ div {
 
   h2 {
     text-align: left;
+    font-family: "Century Gothic", arial, helvetica, sans-serif;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
@@ -90,7 +96,7 @@ div {
 }
 
 label {
-  display: block;
+  display: inline;
 }
 
 
@@ -139,4 +145,12 @@ div.container-fluid{
  }
 
 
+.alert-success{
+    background-image: -webkit-linear-gradient(top,#29ABE2 0,#0071BC 100%);
+    background-image: -o-linear-gradient(top,#29ABE2 0,#0071BC 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#29ABE2),to(#0071BC));
+    background-image: linear-gradient(to bottom, #29ABE2 0, #0071BC 100%);
+  color: #fff;
+  border-color: #29ABE2;
 
+}
