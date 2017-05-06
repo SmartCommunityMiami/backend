@@ -14,7 +14,7 @@
     <% @votes.each do |vote| %>
       <tr>
         <td><%= vote.report.description %></td>
-        <td><%= vote.user.email %></td>
+        <td><%= vote.user.username %></td>
         <td><%= vote.direction %></td>
         <td><%= link_to 'Show', web_vote_path(vote), class: "btn btn-sm btn-primary" %></td>
         <%if current_user == vote.user then%>
