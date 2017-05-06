@@ -14,9 +14,9 @@
       <tr>
         <td><%= issue.description %></td>
         <td><%= issue.department.name %></td>
-        <td><%= link_to 'Show', web_issue_path(issue) %></td>
-        <td><%= link_to 'Edit', edit_web_issue_path(issue) %></td>
-        <td><%= link_to 'Destroy', web_issue_path(issue), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', web_issue_path(issue), class: "btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_web_issue_path(issue), class: "btn btn-sm btn-primary" %></td>
+        <td><%= link_to 'Destroy', web_issue_path(issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
