@@ -17,8 +17,13 @@
         <td><%= vote.user.email %></td>
         <td><%= vote.direction %></td>
         <td><%= link_to 'Show', web_vote_path(vote), class: "btn btn-sm btn-primary" %></td>
-        <td><%= link_to 'Edit', edit_web_vote_path(vote), class: "btn btn-sm btn-primary" %></td>
-        <td><%= link_to 'Destroy', web_vote_path(vote), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
+        <%if current_user == vote.user then%>
+          <td><%= link_to 'Edit', edit_web_vote_path(vote), class: "btn btn-sm btn-primary" %></td>
+          <td><%= link_to 'Destroy', web_vote_path(vote), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
+        <% else%>
+          <td></td>
+          <td></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
