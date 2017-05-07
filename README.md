@@ -104,9 +104,9 @@ These instructions will get you a copy of the project up and running on your loc
 	* The health of your instance should turn green, as pictured above
 
 * In terminal, set environmental variables:
-
-		`eb setenv SECRET_KEY_BASE=rake secret`
-
+		```	
+		eb setenv SECRET_KEY_BASE=`rake secret`
+		```
 * Deploy instance:
 
 		`eb deploy`
