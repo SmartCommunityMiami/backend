@@ -97,15 +97,10 @@ These instructions will get you a copy of the project up and running on your loc
 * Go to Elastic Beanstalk on AWS, select the red instance and follow these steps to create database (it will take approximately 30 minutes to create the database):
 
 	* Click on instance (it should be red)
-
 	* Choose configuration 
-
 	* Scroll to bottom and select create new RDS database
-
 	* Keep defaults, but set username to root and set password
-
     * Click submit
-
 	* The health of your instance should turn green, as pictured above
 
 * In terminal, set environmental variables:
