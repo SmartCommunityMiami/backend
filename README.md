@@ -101,7 +101,7 @@ These instructions will get you a copy of the project up and running on your loc
 	* Scroll to bottom and select create new RDS database
 	* Keep defaults, but set username to root and set password
     * Click submit
-	* The health of your instance should turn green, as pictured above
+	* The health of your instance should turn green
 
 * In terminal, set environmental variables:
 
