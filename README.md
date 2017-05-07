@@ -155,5 +155,5 @@ These instructions will get you a copy of the project up and running on your loc
 * Harper Chalat
 	
 ## License
-* This project is licensed under the Apache License 2.0 – See LICENSE.txt for more info.
+* This project is licensed under the Apache License 2.0 – See [LICENSE.txt](https://github.com/SmartCommunityMiami/backend/blob/master/LICENSE.txt) for more info.
 
