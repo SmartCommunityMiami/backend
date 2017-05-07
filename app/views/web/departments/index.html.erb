@@ -19,8 +19,13 @@
         <td><%= department.phone %></td>
         <td><%= department.organization %></td>
         <td><%= link_to 'Show', web_department_path(department), class: "btn btn-sm btn-primary" %></td>
-        <td><%= link_to 'Edit', edit_web_department_path(department), class: "btn btn-sm btn-primary" %></td>
-        <td><%= link_to 'Destroy', web_department_path(department), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
+        <%if false then%>
+          <td><%= link_to 'Edit', edit_web_department_path(department), class: "btn btn-sm btn-primary" %></td>
+          <td><%= link_to 'Destroy', web_department_path(department), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
+        <%else%>
+          <td></td>
+          <td></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
