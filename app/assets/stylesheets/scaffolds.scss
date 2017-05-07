@@ -71,11 +71,14 @@ div {
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  margin-bottom: 10px;
+   background-image: -webkit-linear-gradient(top,#29ABE2 0,#0071BC 100%);
+    background-image: -o-linear-gradient(top,#29ABE2 0,#0071BC 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#29ABE2),to(#0071BC));
+    background-image: linear-gradient(to bottom, #29ABE2 0, #0071BC 100%);
+    border: 3px solid #000;
 
   h2 {
     text-align: left;
@@ -85,13 +88,14 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0;
-    background-color: #000;
+    background-color: red;
     color: #fff;
+    border-bottom: 3px solid #000;
   }
 
   ul li {
     font-size: 12px;
-    list-style: square;
+    list-style: circle;
   }
 }
 
@@ -154,3 +158,4 @@ div.container-fluid{
   border-color: #29ABE2;
 
 }
+
