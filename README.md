@@ -18,7 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * ruby on rails:
 
-	`http://installrails.com`
+	[Click here to install rails](http://installrails.com)
 
 ### Installing
 #### Installing the backend to run locally
@@ -132,7 +132,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 		```
 		eb deploy
-		
+
 		eb open
 		```
 
