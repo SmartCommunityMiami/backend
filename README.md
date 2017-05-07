@@ -3,24 +3,6 @@
 ## Ruby version
  Ruby 2.3
 
-## System dependencies
-
-## Configuration
-
-## Database creation
-
-## Database initialization
-
-## How to run the test suite
-
-## Services (job queues, cache servers, search engines, etc.)
-
-## Deployment instructions
-
-* ...
-
-
-
 # Smart Community
 This is an application for the Miami-Dade area to be able to report, view, and vote on community issues within their county. It consists of an Android mobile app and a backend created with Ruby on Rails that includes an API and a MySQL database. This readme document details the backend and web part of the Smart Community application.
 
@@ -30,10 +12,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 #### What you need, and how to install it on a Mac.
 
-*mysql:
+* mysql:
+
 	`brew install mysql`
 
 * ruby on rails:
+
 	`http://installrails.com`
 
 ### Installing
@@ -99,7 +83,7 @@ These instructions will get you a copy of the project up and running on your loc
 	The health of your instance should turn green, as pictured above
 
 * In terminal, set environmental variables:
-		`eb setenv SECRET_KEY_BASE=\`rake secret\``
+		`eb setenv SECRET_KEY_BASE=rake secret`
 
 * Deploy instance:
 		`eb deploy`
