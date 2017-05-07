@@ -31,8 +31,8 @@ These instructions will get you a copy of the project up and running on your loc
 * Set environmental variables for mysql database by setting:
 
 	```
-    export RDS_USERNAME=(must exist within application database)
-    export RDS_PASSWORD=(must exist within application database)
+    export RDS_USERNAME=the database username
+    export RDS_PASSWORD=the database password
     export RDS_HOSTNAME=localhost
 	export RDS_PORT=3306
 	```
