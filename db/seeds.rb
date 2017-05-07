@@ -6,14 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 	
-	geoff = User.create(username: 'Geoff', email: 'geoff@geoff.geoff', password: 'geoff1', password_confirmation: 'geoff1')
-	amanda = User.create(username: 'Amanda', email: 'amanda@geoff.geoff', password: 'geoff1', password_confirmation: 'geoff1')
-	blake = User.create(username: 'Blake', email: 'blake@geoff.geoff', password: 'geoff1', password_confirmation: 'geoff1')
-	rob = User.create(username: 'Rob', email: 'rob@geoff.geoff', password: 'geoff1', password_confirmation: 'geoff1')
-
-
-
-
 	roads_bridges_and_canals = Department.create(name: 'Roads, Bridges, and Canals', email: '311@miamidade.gov', phone: '3055923116', organization: 'Transportation and Public Works')
 	traffic_signals_and_signs = Department.create(name: 'Traffic Signals and Signs', email: 'ts&s@miamidade.gov', phone: '', organization: 'Transportation and Public Works')
 	road_debris = Department.create(name: 'FDOT Road Debris', email: 'Fdot.mtleg@dot.state.fl.us', phone: '8504144100', organization: 'Florida Department of Transportation')
@@ -73,10 +65,5 @@
 	Issue.create(description: 'Crocodile/Alligator', department: gator_fish_and_wildlife)
 	Issue.create(description: 'Mosquitos', department: mosquito_control)	
 	tl = Issue.create(description: 'Tegus', department: tegus_fish_and_wildlife)
-
-
-
-	Report.create(description: 'this is a description of the issue', user: amanda, picture_link: 'pic.jpg', latitude: 22.9, longitude: 31.2,  issue: tl)
-
 
 
