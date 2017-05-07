@@ -1,7 +1,13 @@
 # README
 
 ## Ruby version
- Ruby 2.3
+ Ruby 2.4.0
+
+## Rails version
+ Rails 5.0.2
+
+## MySQL version
+ MySQL 14.14
 
 # Smart Community
 This is an application for the Miami-Dade area to be able to report, view, and vote on community issues within their county. It consists of an Android mobile app and a backend created with Ruby on Rails that includes an API and a MySQL database. This readme document details the backend and web part of the Smart Community application.
