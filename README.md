@@ -146,8 +146,11 @@ This test validates whether the controllers and models work correctly or not
 * Navigate to the backend directory
 
 * Run from the command line: 
+	```
+	rake db:test:prepare
 
-	`bundle exec rspec`
+	bundle exec rspec
+	```
 
 ## Versioning
 * Version 1.0
