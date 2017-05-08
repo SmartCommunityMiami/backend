@@ -41,15 +41,16 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem "factory_girl_rails"
+  gem 'factory_girl_rails'
   gem 'ffaker'
 end
 
 group :test do
   gem 'rspec'
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'email_spec'
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
