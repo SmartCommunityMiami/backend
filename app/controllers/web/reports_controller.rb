@@ -26,7 +26,7 @@ class Web::ReportsController < ApplicationController
   def create
     if user_signed_in?
       @report = Report.new(report_params)
-      if @report.save
+      if current_user == @report.user and @report.save
         redirect_to web_report_path(@report), notice: 'Report was successfully created.'
       else
         render :new
@@ -37,7 +37,8 @@ class Web::ReportsController < ApplicationController
   # PATCH/PUT /reports/1
   def update
     if user_signed_in?
-      if @report.update(report_params)
+      @report = Report.find(params[:id])
+      if current_user == @report.user and @report.update(report_params)
         redirect_to web_report_path(@report), notice: 'Report was successfully updated.'
       else
         render :edit
