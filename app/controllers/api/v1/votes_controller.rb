@@ -1,7 +1,7 @@
 class Api::V1::VotesController < Api::ApiController
   skip_before_action :verify_authenticity_token
-  before_action :authenticate_with_token!, only: [:create, :update, :destroy]
-  before_action :set_vote, only: [:show, :update, :destroy]
+  before_action :authenticate_with_token!, only: [:create, :destroy]
+  before_action :set_vote, only: [:show, :destroy]
   respond_to :json
 
   # GET /votes.json
@@ -15,30 +15,14 @@ class Api::V1::VotesController < Api::ApiController
 
   # POST /votes.json
   def create
-    @vote = Vote.new(vote_params)
+    @vote = Vote.find_or_initialize_by(vote_params.except(:direction))
     @vote.user = current_user
-    if @vote.save
+    @vote.direction = params[:vote][:direction]
+    if @vote.id == nil and @vote.save
       render :show, status: :created, location: api_vote_url(@vote)
-    else
-      @vote = Vote.find_by(user_id: current_user.id, report_id: params[:vote][:report_id])
-      @vote.direction = params[:vote][:direction]
-      if @vote.save
-        render :show, status: :created, location: api_vote_url(@vote)
-      else
-        render json: @vote.errors, status: :unprocessable_entity
-      end
-    end
-  end
-
-  # PATCH/PUT /votes/1.json
-  def update
-    if current_user == @vote.user then
-      if @vote.update(vote_params)
-        render :show, status: :ok, location: api_vote_url(@vote)
-      else
-        render json: @vote.errors, status: :unprocessable_entity
-      end
-    else
+    elsif @vote.id and @vote.save
+      render :show, status: :ok, location: api_vote_url(@vote)
+    else 
       render json: @vote.errors, status: :unprocessable_entity
     end
   end

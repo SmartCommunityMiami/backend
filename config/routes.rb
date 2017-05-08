@@ -20,12 +20,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json}, constraints: {format: :json}, path: '/api' do
     scope module: :v1 do
-  		resources :departments
-      resources :issues
-      resources :reports
-      resources :sessions, only: [:create, :destroy]
-      resources :users,    only: [:index, :show, :create]
-      resources :votes
+  		resources :departments, only: [:index, :show, :create, :update, :destroy]
+      resources :issues,      only: [:index, :show, :create, :update, :destroy]
+      resources :reports,     only: [:index, :show, :create, :update, :destroy]
+      resources :sessions,    only: [:create, :destroy]
+      resources :users,       only: [:index, :show, :create]
+      resources :votes,       only: [:index, :show, :create, :destroy]
 
     end
   end
