@@ -138,7 +138,16 @@ These instructions will get you a copy of the project up and running on your loc
 		eb open
 		```
 
-* You can now see the instance deployed
+* You can now see the deployed instance 
+
+## Testing
+This test validates whether the controllers and models work correctly or not
+
+* Navigate to the backend directory
+
+* Run from the command line: 
+
+	`bundle exec rspec`
 
 ## Versioning
 * Version 1.0
