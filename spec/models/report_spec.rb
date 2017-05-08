@@ -27,6 +27,6 @@ describe Report do
 
   it { should have_many(:votes) }
   it { should belong_to(:issue) }
-  it { should belong_to(:users) }
+  it { should belong_to(:user) }
 
 end
