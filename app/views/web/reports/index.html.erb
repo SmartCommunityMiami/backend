@@ -10,6 +10,7 @@
       <th>Latitude</th>
       <th>Longitude</th>
       <th>Date Resolved</th>
+      <th>Votes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
         <td><%= report.latitude %></td>
         <td><%= report.longitude %></td>
         <td><%= report.date_resolved %></td>
+        <td><%= Vote.where(report_id: report).sum(:direction) %></td>
         <td><%= link_to 'Show', web_report_path(report), class: "btn btn-sm btn-primary" %></td>
         <%if current_user == report.user then %>
           <td><%= link_to 'Edit', edit_web_report_path(report), class: "btn btn-sm btn-primary" %></td>

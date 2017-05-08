@@ -33,5 +33,10 @@
   <%= @report.date_resolved %>
 </p>
 
+<p>
+  <strong>Votes:</strong>
+  <%= Vote.where(report_id: @report.id).sum(:direction) %>
+</p>
+
 <%= link_to 'Edit', edit_web_report_path(@report) %> |
 <%= link_to 'Back', web_reports_path %>
