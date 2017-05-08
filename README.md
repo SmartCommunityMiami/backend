@@ -29,6 +29,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 #### Installing the backend to run locally
 * Set environmental variables for mysql database by setting:
+
 	```
     export RDS_USERNAME=the database username
     export RDS_PASSWORD=the database password
@@ -49,6 +50,7 @@ These instructions will get you a copy of the project up and running on your loc
 		`bundle install`
 	
 * Create and seed the database:
+
 		```
 		rake db:create
 
@@ -67,6 +69,7 @@ These instructions will get you a copy of the project up and running on your loc
 		`git clone https://github.com/SmartCommunityMiami/backend.git`
 
 * From terminal, initialize the creation of the Elastic Beanstalk instance, and select these options during process:
+
 		```
 		eb init
 
@@ -84,6 +87,7 @@ These instructions will get you a copy of the project up and running on your loc
 		```
 
 * Create the instance and select these options; this will fail initially until you create the RDS database:
+
 		```
 		eb create
 
@@ -106,6 +110,7 @@ These instructions will get you a copy of the project up and running on your loc
 	* The health of your instance should turn green
 
 * In terminal, set environmental variables:
+
 		```	
 		eb setenv SECRET_KEY_BASE=`rake secret`
 		```
@@ -115,6 +120,7 @@ These instructions will get you a copy of the project up and running on your loc
 		`eb deploy`
 
 * Seed the database:
+
 		```
 		eb ssh
 
@@ -126,6 +132,7 @@ These instructions will get you a copy of the project up and running on your loc
 		```
 
 * Open the instance:
+
 		```
 		eb deploy
 
