@@ -160,11 +160,11 @@ This test validates whether the controllers and models work correctly or not
 * Conor Murray
 * Tami Lake
 * Toni Boltz
+* Stephen Psaradellis
 	
 ## Contributors
 * Blake Maune
 * Rob Highbloom
-* Stephen Psaradellis
 * Sean Loftus
 * Harper Chalat
 	
