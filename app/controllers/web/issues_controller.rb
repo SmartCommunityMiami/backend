@@ -26,7 +26,7 @@ class Web::IssuesController < ApplicationController
   def create
     if user_signed_in?
       @issue = Issue.new(issue_params)
-      if @issue.save
+      if current_user.isAdmin == true and @issue.save
         redirect_to web_issue_path(@issue), notice: 'Issue was successfully created.'
       else
         render :new
@@ -37,7 +37,8 @@ class Web::IssuesController < ApplicationController
   # PATCH/PUT /issues/1
   def update
     if user_signed_in?
-      if @issue.update(issue_params)
+      @issue = Issue.find(params[:id])
+      if current_user.isAdmin == true and @issue.update(issue_params)
         redirect_to web_issue_path(@issue), notice: 'Issue was successfully updated.'
       else
         render :edit
