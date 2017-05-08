@@ -31,10 +31,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
       # Other fields
-      t.string :username,   null: false, default: ""
-      t.string :first_name, null: false, default: ""
-      t.string :last_name,  null: false, default: ""
-      t.string :auth_token, default: ""
+      t.string :username,   null: false
+      t.string :first_name, null: false
+      t.string :last_name,  null: false
+      t.string :auth_token
       t.boolean :isAdmin,   null: false, default: false
 
       t.timestamps null: false

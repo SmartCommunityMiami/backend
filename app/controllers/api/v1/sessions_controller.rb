@@ -16,7 +16,7 @@ class Api::V1::SessionsController < Api::ApiController
 
 	def destroy
 		if current_user
-			current_user.auth_token = "";
+			current_user.auth_token = nil;
 			current_user.save
 			head :no_content
 		else
