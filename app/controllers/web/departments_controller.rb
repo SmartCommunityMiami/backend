@@ -26,7 +26,7 @@ class Web::DepartmentsController < ApplicationController
   def create
     if user_signed_in?
       @department = Department.new(department_params)
-      if @department.save
+      if current_user.isAdmin == true and @department.save
         redirect_to web_department_path(@department), notice: 'Department was successfully created.'
       else
         render :new
@@ -37,7 +37,8 @@ class Web::DepartmentsController < ApplicationController
   # PATCH/PUT /departments/1
   def update
     if user_signed_in?
-      if @department.update(department_params)
+      @department = Department.find(params[:id])
+      if current_user.isAdmin == true and @department.update(department_params)
         redirect_to web_department_path(@department), notice: 'Department was successfully updated.'
       else
         render :edit
